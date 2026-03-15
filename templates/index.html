@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat vs Dog Classifier</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f8; }
+        .card {
+            width: 420px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .preview {
+            margin-top: 15px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            border: 2px dashed #4caf93;
+            padding: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2e7d62;
+            color: white;
+            border: none;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background: #d9f3f7;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <form method="POST" enctype="multipart/form-data">
+        <label>Select image</label><br>
+        <input type="file" name="image" required><br><br>
+        <button type="submit">Classify</button>
+    </form>
+
+    {% if filename %}
+    <div class="preview">
+        <p><b>Uploaded Image:</b></p>
+        <img src="{{ url_for('uploaded_file', filename=filename) }}">
+    </div>
+    {% endif %}
+
+    {% if prediction %}
+    <div class="result">
+        <strong>Result:</strong> {{ prediction }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
