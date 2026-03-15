@@ -1,2 +1,16 @@
-# deep-learning-cat-dog-classifier
-A CNN-based Cat vs Dog image classification web app built using TensorFlow/Keras and Flask, allowing users to upload images and get real-time predictions.
+# Deep Learning Cat vs Dog Classifier 
+ 
+A machine learning web application that classifies images as cats or dogs using multiple models. 
+ 
+## Models Used 
+- CNN (Deep Learning) 
+- SVM 
+- Random Forest 
+- Logistic Regression 
+ 
+## Tech Stack 
+- Python 
+- Flask 
+- TensorFlow / Keras 
+- Scikit-learn 
+- HTML / CSS 
