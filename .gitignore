@@ -4,3 +4,9 @@ uploads/
 *.pkl 
 __pycache__/ 
 *.pyc 
+dataset/ 
+uploads/ 
+*.h5 
+*.pkl 
+__pycache__/ 
+*.pyc 
